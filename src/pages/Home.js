@@ -9,11 +9,17 @@ const Home = (props) => {
     getFetchData();
   }, []);
 
-  function getFetchData() {
-    Axios.get(
-      `https://cors-anywhere.herokuapp.com/https://fetch-hiring.s3.amazonaws.com/hiring.json`
-    ).then((res) => console.log(res));
+  async function getFetchData() {
+    try {
+      const res = await Axios.get(
+        `https://cors-anywhere.herokuapp.com/https://fetch-hiring.s3.amazonaws.com/hiring.json`
+      );
+      setFetchData(res.data);
+    } catch (error) {
+      console.error(error);
+    }
   }
+
   return <>hello home</>;
 };
 
