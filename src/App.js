@@ -8,16 +8,19 @@ import List3 from './pages/List3';
 import List4 from './pages/List4';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import MasterProvider from './utils/context/index';
 
 function App() {
   return (
     <>
-      <NavBar />
-      <Route path={['/', '/home']} component={Home} />
-      <Route exact path={'/list1'} component={List1} />
-      <Route exact path={'/list2'} component={List2} />
-      <Route exact path={'/list3'} component={List3} />
-      <Route exact path={'/list4'} component={List4} />
+      <MasterProvider>
+        <NavBar />
+        <Route path={['/', '/home']} component={Home} />
+        <Route exact path={'/list1'} component={List1} />
+        <Route exact path={'/list2'} component={List2} />
+        <Route exact path={'/list3'} component={List3} />
+        <Route exact path={'/list4'} component={List4} />
+      </MasterProvider>
     </>
   );
 }
