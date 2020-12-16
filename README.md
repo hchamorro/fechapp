@@ -24,4 +24,4 @@ npm install
 npm start
 ```
 
-Client to runs on localhost 3000 ✌️
+Client runs on localhost 3000 ✌️
