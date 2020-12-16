@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './style.css';
 
-function DataCard(props) {
+function DataCardLink(props) {
   return (
     <div className="card">
-      <div className="content">
+      <Link to={`/item/${props.id}`} className="content">
         <h5>{props.name} </h5>
-      </div>
+      </Link>
     </div>
   );
 }
 
-export default DataCard;
+export default DataCardLink;

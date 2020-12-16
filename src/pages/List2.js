@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import DataCard from '../components/DataCard/DataCard';
+import DataCardLink from '../components/DataCardLink/DataCardLink';
 import { List2Context } from '../utils/context/List2Context';
 
 const List2 = (props) => {
@@ -11,11 +11,11 @@ const List2 = (props) => {
       </div>
       <div className="d-f flw-w">
         {list2.map((list) => (
-          <>
+          <div key={list.id}>
             {list.name === null || list.name === '' ? null : (
-              <DataCard name={list.name} key={list.id} />
+              <DataCardLink name={list.name} id={list.id} />
             )}
-          </>
+          </div>
         ))}
       </div>
     </>

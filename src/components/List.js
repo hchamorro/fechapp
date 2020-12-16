@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Li(props) {
   return (
     <>
-      <a href="#" className="list-group-item">
+      <Link to={`/item/${props.id}`} className="list-group-item">
         {props.name}
-      </a>
+      </Link>
     </>
   );
 }

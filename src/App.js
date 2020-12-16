@@ -7,6 +7,7 @@ import List1 from './pages/List1';
 import List2 from './pages/List2';
 import List3 from './pages/List3';
 import List4 from './pages/List4';
+import Item from './pages/Item';
 import { FetchDataContext } from './utils/context/fetchDataContext';
 import { List1Context } from './utils/context/List1Context';
 import { List2Context } from './utils/context/List2Context';
@@ -41,28 +42,27 @@ function App() {
     const listId2 = [];
     const listId3 = [];
     const listId4 = [];
-    if (fetchData) {
-      value.filter((data) => {
-        switch (data.listId) {
-          case 1:
-            listId1.push(data);
-            break;
-          case 2:
-            listId2.push(data);
-            break;
-          case 3:
-            listId3.push(data);
-            break;
-          case 4:
-            listId4.push(data);
-            break;
-        }
-      });
-      setList1(listId1);
-      setList2(listId2);
-      setList3(listId3);
-      setList4(listId4);
-    }
+
+    value.filter((data) => {
+      switch (data.listId) {
+        case 1:
+          listId1.push(data);
+          break;
+        case 2:
+          listId2.push(data);
+          break;
+        case 3:
+          listId3.push(data);
+          break;
+        case 4:
+          listId4.push(data);
+          break;
+      }
+    });
+    setList1(listId1);
+    setList2(listId2);
+    setList3(listId3);
+    setList4(listId4);
   }
 
   return (
@@ -74,6 +74,7 @@ function App() {
         <Route exact path={'/list2'} component={List2} />
         <Route exact path={'/list3'} component={List3} />
         <Route exact path={'/list4'} component={List4} />
+        <Route path={'/item/:id'} exact component={Item} />
       </>
     </>
   );

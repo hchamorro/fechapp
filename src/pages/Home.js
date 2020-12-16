@@ -15,11 +15,11 @@ const Home = (props) => {
     return (
       <DataTable title="List ID 1">
         {list1.map((list) => (
-          <>
+          <div key={list.id}>
             {list.name === null || list.name === '' ? null : (
-              <Li name={list.name} key={list.id} />
+              <Li name={list.name} id={list.id} />
             )}
-          </>
+          </div>
         ))}
       </DataTable>
     );
@@ -29,11 +29,11 @@ const Home = (props) => {
     return (
       <DataTable title="List ID 2">
         {list2.map((list) => (
-          <>
+          <div key={list.id}>
             {list.name === null || list.name === '' ? null : (
-              <Li name={list.name} key={list.id} />
+              <Li name={list.name} key={list.id} id={list.id} />
             )}
-          </>
+          </div>
         ))}
       </DataTable>
     );
@@ -43,11 +43,11 @@ const Home = (props) => {
     return (
       <DataTable title="List ID 3">
         {list3.map((list) => (
-          <>
+          <div key={list.id}>
             {list.name === null || list.name === '' ? null : (
-              <Li name={list.name} key={list.id} />
+              <Li name={list.name} key={list.id} id={list.id} />
             )}
-          </>
+          </div>
         ))}
       </DataTable>
     );
@@ -57,11 +57,11 @@ const Home = (props) => {
     return (
       <DataTable title="List ID 4">
         {list4.map((list) => (
-          <>
+          <div key={list.id}>
             {list.name === null || list.name === '' ? null : (
-              <Li name={list.name} key={list.id} />
+              <Li name={list.name} key={list.id} id={list.id} />
             )}
-          </>
+          </div>
         ))}
       </DataTable>
     );
