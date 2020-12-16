@@ -1,10 +1,10 @@
-.card {
+.card-table {
   background: #fff;
   border-radius: 2px;
   margin: 1rem;
   padding: 0.25rem;
   position: relative;
-  width: 10rem;
+  width: 325px;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
 }
 

@@ -5,7 +5,7 @@ function DataCard(props) {
   return (
     <div className="card">
       <div className="content">
-        <h5>{props.name} Prop Name</h5>
+        <h5>{props.name} </h5>
       </div>
     </div>
   );

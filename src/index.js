@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import MasterProvider from './utils/context/index';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -9,7 +10,9 @@ ReactDOM.render(
   <Router>
     <React.StrictMode>
       <Switch>
-        <App />
+        <MasterProvider>
+          <App />
+        </MasterProvider>
       </Switch>
     </React.StrictMode>
   </Router>,
